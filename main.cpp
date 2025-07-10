@@ -1,4 +1,4 @@
-#include "Interface.h"
+#include "Game.h"
 
 Status status;
 
@@ -644,12 +644,6 @@ int WINAPI WinMain(
 		}
 		else
 		{
-			// ここは 別プロセスで起動　<-- WM_PAINT の影響を受けるため!
-			// （if文でTRUEの場合、表示)
-			//
-			/* MessageLoop で処理する場合、*/
-			/* いちいちWM_PAINT を呼び出すとちらつく（特にコントロールが）*/
-			/* 従って、InvalidateRect()関数はここでは使用しない */
 			if (game)_Method_Window_DrawGameMode(window, 520, 340);
 		}
 	}
